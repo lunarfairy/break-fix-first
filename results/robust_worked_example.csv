@@ -1,0 +1,10 @@
+learner,step,action,observed,remaining,true_in_set
+none,0,ticket,,24,True
+none,1,c_nacl_app,"('nacl-app', [(100, 'allow', 'tcp', 80, 80, 'vpc')], [(100, 'allow', 'all', 0, 65535, 'any')])",1,True
+none,2,outcome,correct,1,True
+MC3,0,ticket,,15,False
+MC3,1,c_sg_app,"('sg-app', [('tcp', 80, 80, 'sg-alb')], [('all', 0, 65535, 'any')])",6,False
+MC3,2,c_asg,"('asg', [('desired', '2'), ('hc_type', 'ELB'), ('subnets', ""['app-a', 'app-b']""), ('tg', 'tg-app')])",2,False
+MC3,3,c_lt,"('lt', [('ami', 'ami-web-v3'), ('ami_exists', 'True'), ('app_port', '80'), ('health_redirect', 'False'), ('profile', 'role-app'), ('public_ip', 'False'), ('sg', 'sg-app'), ('userdata_ok', 'True')])",1,False
+MC3,4,repair: trust policy -> lambda.amazonaws.com,all monitors unchanged,0,False
+MC3,5,outcome,impasse,0,False

@@ -1,0 +1,10 @@
+stage,fault,mid,description,scope_size,ticket_set,optimal_actions,trace_actions,user_visible,impasse_yield,n_yield,eligible,selected,stage_name
+1,S1,U133,sg-app allows port 8080 instead of 80 from the ALB,23,8,1.0,16,True,,0,True,True,"Stage 1: instance, security group, web server"
+1,S5,U134,All egress rules removed from sg-app,23,9,1.0,16,True,MC2,1,True,True,"Stage 1: instance, security group, web server"
+2,A1,U063,nacl-app has no inbound rule for ephemeral return ports,106,21,1.0,17,True,MC3,1,True,True,"Stage 2: custom VPC, routing, network ACLs, database"
+2,A2,U078,nacl-db inbound rule for 3306 removed,106,29,1.0,28,True,MC3,1,True,True,"Stage 2: custom VPC, routing, network ACLs, database"
+3,N3,U032,NAT gateway nat-a placed in private subnet app-a,171,10,1.0,20,False,MC8,1,True,True,"Stage 3a: NAT, load balancing, health checks, scaling"
+3,N7,U188,ASG launches into public subnets without public IPv4 addresses,171,22,2.0,12,True,MC5,1,True,True,"Stage 3a: NAT, load balancing, health checks, scaling"
+3,L1,U178,Target-group health-check path is /healthz (returns 404),171,5,1.0,10,True,MC7,1,True,True,"Stage 3a: NAT, load balancing, health checks, scaling"
+4,I1,U218,Instance role lacks s3:PutObject,184,3,1.0,22,True,MC6,1,True,True,"Stage 3b: identity, object storage, content delivery"
+4,I5,U224,Bucket policy explicitly denies PutObject to the instance role,184,3,1.0,22,True,MC4,1,True,True,"Stage 3b: identity, object storage, content delivery"

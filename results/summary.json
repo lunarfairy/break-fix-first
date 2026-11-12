@@ -1,0 +1,126 @@
+{
+ "n_universe": 228,
+ "n_symptomatic": 184,
+ "n_silent": 44,
+ "strategy_means_curated": {
+  "optimal": 1.4634146341463414,
+  "greedy": 1.5121951219512195,
+  "trace": 11.439024390243903,
+  "sweep": 9.24390243902439,
+  "random": 13.670365853658534,
+  "optimal_with_path_analysis": 1.4634146341463414
+ },
+ "strategy_medians_curated": {
+  "optimal": 1.0,
+  "greedy": 1.0,
+  "trace": 11.0,
+  "sweep": 11.0,
+  "random": 15.095
+ },
+ "strategy_means_universe": {
+  "optimal": 1.423913043478261,
+  "greedy": 1.4456521739130435,
+  "trace": 13.78804347826087,
+  "sweep": 8.21195652173913,
+  "random": 17.695489130434783,
+  "optimal_with_path_analysis": 1.3858695652173914
+ },
+ "distance_spearman": {
+  "ticket_set": {
+   "rho": 0.32583483266075364,
+   "p": 0.037621685487272495
+  },
+  "optimal": {
+   "rho": 0.3139507489568396,
+   "p": 0.04561295682674369
+  },
+  "greedy": {
+   "rho": 0.30352306957027714,
+   "p": 0.05370882474631442
+  },
+  "trace": {
+   "rho": 0.7032150403967371,
+   "p": 2.942088643172564e-07
+  },
+  "sweep": {
+   "rho": 0.4792238992399369,
+   "p": 0.0015243029997819815
+  },
+  "random": {
+   "rho": 0.14689534609433957,
+   "p": 0.3594118652300752
+  }
+ },
+ "n_latent": 7,
+ "latent_faults": [
+  "N1",
+  "N2",
+  "N3",
+  "C5",
+  "I6",
+  "I7",
+  "D3"
+ ],
+ "distance_distribution": {
+  "1": 5,
+  "2": 7,
+  "3": 8,
+  "4": 14,
+  "5": 4,
+  "6": 3
+ },
+ "ping_overall_agreement": 0.09495896834701055,
+ "ping_n_comparisons": 853,
+ "pairs_valid": 815,
+ "pairs_masked_ticket": 462,
+ "pairs_masked_telemetry": 300,
+ "top_maskers": {
+  "N4": 33,
+  "N5": 33,
+  "C1": 31,
+  "C2": 31,
+  "A3": 26,
+  "N7": 19,
+  "L3": 18,
+  "L4": 18
+ },
+ "curriculum": [
+  "S1",
+  "S5",
+  "A1",
+  "A2",
+  "N3",
+  "N7",
+  "L1",
+  "I1",
+  "I5"
+ ],
+ "curriculum_coverage": [
+  "MC2",
+  "MC3",
+  "MC4",
+  "MC5",
+  "MC6",
+  "MC7",
+  "MC8"
+ ],
+ "curriculum_uncovered": [],
+ "candidates_per_stage": {
+  "1": 6,
+  "2": 12,
+  "3": 13,
+  "4": 10
+ },
+ "eligible_per_stage": {
+  "1": 5,
+  "2": 11,
+  "3": 11,
+  "4": 5
+ },
+ "pool_n": 19,
+ "pool_targeted": 13,
+ "pool_untargeted": 6,
+ "pool_ticket_identifiable": [
+  "U225"
+ ]
+}

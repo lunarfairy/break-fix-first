@@ -1,0 +1,7 @@
+tier,n_actions,curated_classes,curated_singletons,curated_largest,curated_unresolved,universe_classes,universe_singletons,universe_largest,universe_mean_class_size_per_fault
+T0 incident ticket,0,21,10,5,N1/N3;N4/N5;N6/S3;N7/S5/A1/I3/I4;S1/S2/S6/A4/L2;S4/A2/D1/D2;L1/L5;L3/L4;C1/C2;C3/C4/I2;I1/I5,41,22,29,14.73913043478261
+T1 + edge probes,2,21,10,5,N1/N3;N4/N5;N6/S3;N7/S5/A1/I3/I4;S1/S2/S6/A4/L2;S4/A2/D1/D2;L1/L5;L3/L4;C1/C2;C3/C4/I2;I1/I5,41,22,29,14.73913043478261
+T2 + service telemetry,8,33,26,3,N1/N3;N4/N5;N6/S3;S1/S2/A4;S4/A2;I1/I5;I3/I4,65,43,27,9.130434782608695
+T3 + instance shell,22,33,26,3,N1/N3;N4/N5;N6/S3;S1/S2/A4;S4/A2;I1/I5;I3/I4,66,44,27,9.108695652173912
+T4 + configuration inspection,43,41,41,1,,184,184,1,1.0
+T2 + path analysis (no inspection),12,37,33,2,N4/N5;S1/S2;I1/I5;I3/I4,83,53,9,4.413043478260869

@@ -1,0 +1,4 @@
+path,n,agreement,ping_fails_service_ok,ping_ok_service_fails,both_fail
+client to load balancer,229,0.1091703056768559,204,0,25
+instance to database,311,0.18006430868167203,255,0,56
+instance to internet,313,0.0,313,0,0

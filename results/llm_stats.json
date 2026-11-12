@@ -1,0 +1,385 @@
+{
+ "seed": 20261106,
+ "n_bootstrap": 10000,
+ "n_permutations": 10000,
+ "sensitive_definition": "fault row in matrix_curated_greedy.csv has a code in {I, WI, W, B} for any of MC2..MC8",
+ "sensitive_faults": [
+  "N3",
+  "N7",
+  "S5",
+  "S6",
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "L1",
+  "L5",
+  "I1",
+  "I2",
+  "I3",
+  "I4",
+  "I5",
+  "I6",
+  "I7",
+  "E3"
+ ],
+ "agents": {
+  "haiku": {
+   "model_id": "claude-haiku-5-5",
+   "episodes": 82,
+   "solved": 75,
+   "solved_rate": 0.9146341463414634,
+   "wilson95": [
+    0.8341245443721832,
+    0.9580334750067581
+   ],
+   "fault_cluster_bootstrap95": [
+    0.8292682926829268,
+    0.975609756097561
+   ],
+   "faults_solved_both_runs": 36,
+   "faults_solved_at_least_one_run": 39,
+   "share_faults_solved_both_runs": 0.8780487804878049,
+   "share_faults_solved_at_least_one_run": 0.9512195121951219,
+   "mean_actions_all": 5.7682926829268295,
+   "mean_actions_solved": 5.0,
+   "median_actions_all": 4.0,
+   "solved_first_diagnosis": 74,
+   "episodes_naming_gold_resource": 75,
+   "gold_resource_diagnoses": 75,
+   "gold_resource_diagnoses_rejected_in_loop": 0,
+   "solved_after_in_loop_reject": 0,
+   "outcomes": {
+    "out_of_turns": 7,
+    "solved": 75
+   },
+   "unsolved_episodes": [
+    {
+     "fault": "A3",
+     "run": 1,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 1,
+     "judge_verdicts": "wrong_resource",
+     "grader2_verdicts": "-",
+     "n_actions_until_end": 14
+    },
+    {
+     "fault": "A3",
+     "run": 2,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 2,
+     "judge_verdicts": "wrong_resource;wrong_resource",
+     "grader2_verdicts": "-;-",
+     "n_actions_until_end": 13
+    },
+    {
+     "fault": "C5",
+     "run": 2,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 1,
+     "judge_verdicts": "wrong_resource",
+     "grader2_verdicts": "-",
+     "n_actions_until_end": 14
+    },
+    {
+     "fault": "I6",
+     "run": 1,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 0,
+     "judge_verdicts": "",
+     "grader2_verdicts": "",
+     "n_actions_until_end": 15
+    },
+    {
+     "fault": "L6",
+     "run": 1,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 1,
+     "judge_verdicts": "wrong_resource",
+     "grader2_verdicts": "-",
+     "n_actions_until_end": 14
+    },
+    {
+     "fault": "N7",
+     "run": 1,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 1,
+     "judge_verdicts": "wrong_resource",
+     "grader2_verdicts": "-",
+     "n_actions_until_end": 14
+    },
+    {
+     "fault": "N7",
+     "run": 2,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 1,
+     "judge_verdicts": "wrong_resource",
+     "grader2_verdicts": "-",
+     "n_actions_until_end": 14
+    }
+   ],
+   "misconception_episode_level": {
+    "sensitive_failed": 5,
+    "sensitive_episodes": 36,
+    "other_failed": 2,
+    "other_episodes": 46,
+    "failure_rate_sensitive": 0.1388888888888889,
+    "failure_rate_other": 0.043478260869565216,
+    "odds_ratio": 3.5483870967741935,
+    "fisher_p_two_sided": 0.2311728599528603
+   },
+   "misconception_fault_level_permutation": {
+    "diff_mean_failure_sensitive_minus_other": 0.09541062801932368,
+    "n_perm": 10000,
+    "n_extreme": 3534,
+    "p_two_sided": 0.3534646535346465,
+    "p_two_sided_raw": 0.3534,
+    "mean_failure_sensitive": 0.1388888888888889,
+    "mean_failure_other": 0.043478260869565216,
+    "n_faults_sensitive": 18,
+    "n_faults_other": 23
+   }
+  },
+  "sonnet": {
+   "model_id": "claude-sonnet-5",
+   "episodes": 82,
+   "solved": 77,
+   "solved_rate": 0.9390243902439024,
+   "wilson95": [
+    0.8650795049984596,
+    0.973676044932184
+   ],
+   "fault_cluster_bootstrap95": [
+    0.8658536585365854,
+    1.0
+   ],
+   "faults_solved_both_runs": 38,
+   "faults_solved_at_least_one_run": 39,
+   "share_faults_solved_both_runs": 0.926829268292683,
+   "share_faults_solved_at_least_one_run": 0.9512195121951219,
+   "mean_actions_all": 4.341463414634147,
+   "mean_actions_solved": 3.8181818181818183,
+   "median_actions_all": 3.0,
+   "solved_first_diagnosis": 76,
+   "episodes_naming_gold_resource": 78,
+   "gold_resource_diagnoses": 78,
+   "gold_resource_diagnoses_rejected_in_loop": 1,
+   "solved_after_in_loop_reject": 0,
+   "outcomes": {
+    "out_of_turns": 5,
+    "solved": 77
+   },
+   "unsolved_episodes": [
+    {
+     "fault": "N2",
+     "run": 2,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 0,
+     "judge_verdicts": "",
+     "grader2_verdicts": "",
+     "n_actions_until_end": 13
+    },
+    {
+     "fault": "N6",
+     "run": 1,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 2,
+     "judge_verdicts": "wrong_resource;REJECT",
+     "grader2_verdicts": "-;REJECT",
+     "n_actions_until_end": 12
+    },
+    {
+     "fault": "N6",
+     "run": 2,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 1,
+     "judge_verdicts": "wrong_resource",
+     "grader2_verdicts": "-",
+     "n_actions_until_end": 11
+    },
+    {
+     "fault": "N7",
+     "run": 1,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 1,
+     "judge_verdicts": "wrong_resource",
+     "grader2_verdicts": "-",
+     "n_actions_until_end": 13
+    },
+    {
+     "fault": "N7",
+     "run": 2,
+     "outcome": "out_of_turns",
+     "n_diagnoses": 1,
+     "judge_verdicts": "wrong_resource",
+     "grader2_verdicts": "-",
+     "n_actions_until_end": 13
+    }
+   ],
+   "misconception_episode_level": {
+    "sensitive_failed": 2,
+    "sensitive_episodes": 36,
+    "other_failed": 3,
+    "other_episodes": 46,
+    "failure_rate_sensitive": 0.05555555555555555,
+    "failure_rate_other": 0.06521739130434782,
+    "odds_ratio": 0.8431372549019608,
+    "fisher_p_two_sided": 1.0
+   },
+   "misconception_fault_level_permutation": {
+    "diff_mean_failure_sensitive_minus_other": -0.009661835748792272,
+    "n_perm": 10000,
+    "n_extreme": 10000,
+    "p_two_sided": 1.0,
+    "p_two_sided_raw": 1.0,
+    "mean_failure_sensitive": 0.05555555555555555,
+    "mean_failure_other": 0.06521739130434782,
+    "n_faults_sensitive": 18,
+    "n_faults_other": 23
+   }
+  }
+ },
+ "misconception_pooled": {
+  "episode_level": {
+   "sensitive_failed": 7,
+   "sensitive_episodes": 72,
+   "other_failed": 5,
+   "other_episodes": 92,
+   "failure_rate_sensitive": 0.09722222222222222,
+   "failure_rate_other": 0.05434782608695652,
+   "odds_ratio": 1.873846153846154,
+   "fisher_p_two_sided": 0.3699160476497362
+  },
+  "fault_level_permutation": {
+   "diff_mean_failure_sensitive_minus_other": 0.042874396135265704,
+   "n_perm": 10000,
+   "n_extreme": 5926,
+   "p_two_sided": 0.5926407359264073,
+   "p_two_sided_raw": 0.5926,
+   "mean_failure_sensitive": 0.09722222222222222,
+   "mean_failure_other": 0.05434782608695652,
+   "n_faults_sensitive": 18,
+   "n_faults_other": 23
+  }
+ },
+ "grader_agreement": {
+  "n_gold_resource_diagnoses": 153,
+  "agreement": 0.9934640522875817,
+  "n_agree": 152,
+  "cohen_kappa": 0.6637362637362619,
+  "table_judge_by_grader2": {
+   "ACCEPT|ACCEPT": 151,
+   "ACCEPT|REJECT": 1,
+   "REJECT|REJECT": 1
+  },
+  "per_agent": {
+   "haiku": {
+    "n": 75,
+    "agreement": 0.9866666666666667,
+    "cohen_kappa": 0.0
+   },
+   "sonnet": {
+    "n": 78,
+    "agreement": 1.0,
+    "cohen_kappa": 1.0
+   }
+  },
+  "episodes_with_grader2_accepted_gold_diag": {
+   "haiku": 74,
+   "sonnet": 77
+  },
+  "episodes_with_grader2_accepted_gold_diag_note": "Descriptive: episodes containing at least one gold-resource diagnosis that grader2 accepts; not a counterfactual rerun.",
+  "disagreements": [
+   {
+    "fault": "L2",
+    "agent": "haiku",
+    "run": 2,
+    "diag_index": 1,
+    "statement": "tg-app health check port is set to 8080 instead of 80, so the ALB probes a port the web server never listens on and the targets time out.",
+    "judge": "ACCEPT",
+    "grader2": "REJECT",
+    "judge_reason": "The submission identifies the target-group resource and the port mismatch (8080 vs 80) causing failed health checks, which matches the gold fault and would restore the design if corrected.",
+    "grader2_reason": "The submission blames the health check port setting on tg-app rather than the target group's traffic/forwarding port, which is a different setting of the same resource, so applying it would not restore the intended design."
+   }
+  ]
+ },
+ "round1_comparison": {
+  "haiku": {
+   "r1_correct_as_reported": 73,
+   "r1_correct_without_author_adjudication": 70,
+   "r1_adjudicated_episodes": 3,
+   "r1_episodes": 82,
+   "r2_solved": 75,
+   "r2_episodes": 82,
+   "r1_mean_actions": 6.012195121951219,
+   "r2_mean_actions_all": 5.7682926829268295,
+   "r2_mean_actions_to_first_gold_resource_diag": 5.7682926829268295,
+   "faults_with_changed_solved_runs": {
+    "N2": {
+     "r1_solved_runs": 1,
+     "r2_solved_runs": 2
+    },
+    "S6": {
+     "r1_solved_runs": 0,
+     "r2_solved_runs": 2
+    },
+    "A3": {
+     "r1_solved_runs": 1,
+     "r2_solved_runs": 0
+    },
+    "L6": {
+     "r1_solved_runs": 2,
+     "r2_solved_runs": 1
+    },
+    "I6": {
+     "r1_solved_runs": 2,
+     "r2_solved_runs": 1
+    },
+    "D3": {
+     "r1_solved_runs": 0,
+     "r2_solved_runs": 2
+    }
+   }
+  },
+  "sonnet": {
+   "r1_correct_as_reported": 78,
+   "r1_correct_without_author_adjudication": 78,
+   "r1_adjudicated_episodes": 0,
+   "r1_episodes": 82,
+   "r2_solved": 77,
+   "r2_episodes": 82,
+   "r1_mean_actions": 4.317073170731708,
+   "r2_mean_actions_all": 4.341463414634147,
+   "r2_mean_actions_to_first_gold_resource_diag": 4.341463414634147,
+   "faults_with_changed_solved_runs": {
+    "N2": {
+     "r1_solved_runs": 2,
+     "r2_solved_runs": 1
+    }
+   }
+  },
+  "N7": {
+   "haiku": {
+    "r1_solved_runs": 0,
+    "r2_solved_runs": 0
+   },
+   "sonnet": {
+    "r1_solved_runs": 0,
+    "r2_solved_runs": 0
+   }
+  },
+  "L6": {
+   "haiku": {
+    "r1_solved_runs": 2,
+    "r2_solved_runs": 1,
+    "note": "L6 was redefined in round 2 (ALB node for AZ b in private subnet app-b)"
+   },
+   "sonnet": {
+    "r1_solved_runs": 2,
+    "r2_solved_runs": 2,
+    "note": "L6 was redefined in round 2 (ALB node for AZ b in private subnet app-b)"
+   }
+  },
+  "note": "Descriptive only. Round 1 ended an episode on the first diagnosis naming the gold resource and judged content afterwards (with 3 author overrides); round 2 uses the setting-sensitive verify loop, a corrected cloud model and a redefined L6, so the rounds are not a controlled comparison."
+ }
+}

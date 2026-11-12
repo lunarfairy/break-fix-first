@@ -1,0 +1,39 @@
+mc,condition,unaffected,impasse,wrong_stable
+none,"baseline (verify, masks)",184,0.0,0.0
+none,no repair verification,184,0.0,0.0
+MC2,"baseline (verify, masks)",169,15.0,0.0
+MC2,no repair verification,169,7.0,8.0
+MC3,"baseline (verify, masks)",124,60.0,0.0
+MC3,no repair verification,124,22.0,38.0
+MC3,perception mask removed,124,60.0,0.0
+MC4,"baseline (verify, masks)",182,2.0,0.0
+MC4,no repair verification,182,2.0,0.0
+MC4,perception mask removed,182,2.0,0.0
+MC5,"baseline (verify, masks)",169,15.0,0.0
+MC5,no repair verification,169,10.0,5.0
+MC5,perception mask removed,169,15.0,0.0
+MC6,"baseline (verify, masks)",175,9.0,0.0
+MC6,no repair verification,175,5.0,4.0
+MC6,perception mask removed,175,9.0,0.0
+MC7,"baseline (verify, masks)",181,3.0,0.0
+MC7,no repair verification,181,3.0,0.0
+MC7,perception mask removed,181,3.0,0.0
+MC8,"baseline (verify, masks)",170,14.0,0.0
+MC8,no repair verification,170,9.0,5.0
+MC8,perception mask removed,170,14.0,0.0
+none,observation noise 0.05 (10 seeds),1721,119.0,0.0
+MC2,observation noise 0.05 (10 seeds),1592,248.0,0.0
+MC3,observation noise 0.05 (10 seeds),1163,677.0,0.0
+MC4,observation noise 0.05 (10 seeds),1701,139.0,0.0
+MC5,observation noise 0.05 (10 seeds),1578,262.0,0.0
+MC6,observation noise 0.05 (10 seeds),1642,198.0,0.0
+MC7,observation noise 0.05 (10 seeds),1692,148.0,0.0
+MC8,observation noise 0.05 (10 seeds),1587,253.0,0.0
+none,observation noise 0.10 (10 seeds),1606,234.0,0.0
+MC2,observation noise 0.10 (10 seeds),1488,352.0,0.0
+MC3,observation noise 0.10 (10 seeds),1089,751.0,0.0
+MC4,observation noise 0.10 (10 seeds),1586,254.0,0.0
+MC5,observation noise 0.10 (10 seeds),1472,368.0,0.0
+MC6,observation noise 0.10 (10 seeds),1538,302.0,0.0
+MC7,observation noise 0.10 (10 seeds),1579,261.0,0.0
+MC8,observation noise 0.10 (10 seeds),1485,355.0,0.0

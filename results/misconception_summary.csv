@@ -1,0 +1,17 @@
+mc,label,strategy,bank_revealed,bank_impasse,bank_wrong_repair,bank_ticket_blind,curated_revealed,curated_impasse,curated_wrong_repair,curated_revealing,median_actions_to_impasse
+MC1,Ping tests service reachability,greedy,0,0,0,0,0,0,0,,
+MC1,Ping tests service reachability,trace,138,138,0,0,29,29,0,N1;N2;N3;A3;A4;A1;A2;S6;S2;S1;S5;S4;L4;L2;L1;N7;C2;L3;C1;I3;C4;C3;L5;I4;I1;I2;I5;D1;D2,2.0
+MC2,Security groups are stateless,greedy,15,15,8,15,2,2,1,S6;S5,4.0
+MC2,Security groups are stateless,trace,15,15,0,15,2,2,0,S6;S5,16.0
+MC3,Network ACLs are irrelevant,greedy,60,60,38,57,4,4,2,A3;A4;A1;A2,3.0
+MC3,Network ACLs are irrelevant,trace,59,59,10,57,4,4,0,A3;A4;A1;A2,16.0
+MC4,Identity policy alone decides S3 access,greedy,2,2,0,2,2,2,0,I5;E3,0.5
+MC4,Identity policy alone decides S3 access,trace,2,2,0,2,2,2,0,I5;E3,11.0
+MC5,A public subnet gives internet access,greedy,15,15,5,15,1,1,1,N7,1.0
+MC5,A public subnet gives internet access,trace,15,15,2,15,1,1,0,N7,1.0
+MC6,Instances act with the console user's permissions,greedy,9,9,4,9,6,6,3,I3;I4;I1;I7;I6;I2,1.0
+MC6,Instances act with the console user's permissions,trace,9,9,2,9,6,6,1,I3;I4;I1;I7;I6;I2,13.0
+MC7,Health checks probe the user-facing page,greedy,3,3,0,3,2,2,0,L1;L5,1.0
+MC7,Health checks probe the user-facing page,trace,3,3,0,3,2,2,0,L1;L5,9.0
+MC8,A NAT gateway reaches the internet wherever it is placed,greedy,14,14,5,14,1,1,1,N3,2.0
+MC8,A NAT gateway reaches the internet wherever it is placed,trace,14,14,8,14,1,1,1,N3,19.0

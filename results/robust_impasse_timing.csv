@@ -1,0 +1,15 @@
+mc,strategy,impasses,ticket_excludes_true,impasse_at_zero_actions,after_actions,with_wrong_repair,median_actions
+MC2,greedy,15,15,0,15,8,4.0
+MC2,trace,15,15,0,15,0,16.0
+MC3,greedy,60,57,13,47,38,3.0
+MC3,trace,59,57,13,46,10,16.0
+MC4,greedy,2,2,1,1,0,0.5
+MC4,trace,2,2,1,1,0,11.0
+MC5,greedy,15,15,6,9,5,1.0
+MC5,trace,15,15,6,9,2,1.0
+MC6,greedy,9,9,2,7,4,1.0
+MC6,trace,9,9,2,7,2,13.0
+MC7,greedy,3,3,0,3,0,1.0
+MC7,trace,3,3,0,3,0,9.0
+MC8,greedy,14,14,6,8,5,2.0
+MC8,trace,14,14,6,8,8,19.0

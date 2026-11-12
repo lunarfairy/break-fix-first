@@ -1,0 +1,42 @@
+stage,fault,mid,description,scope_size,ticket_set,optimal_actions,trace_actions,user_visible,impasse_yield,n_yield,eligible,selected
+1,S1,U133,sg-app allows port 8080 instead of 80 from the ALB,23,8,1.0,16,True,,0,True,True
+1,S2,U129,sg-app ingress references sg-db instead of sg-alb,23,8,1.0,16,True,,0,True,False
+1,S5,U134,All egress rules removed from sg-app,23,9,1.0,16,True,MC2,1,True,True
+1,C1,U207,Launch template references a deregistered AMI,23,1,0.0,0,True,,0,False,False
+1,C3,U214,User-data script fails before starting the web server,23,3,1.0,13,True,,0,True,False
+1,C4,U213,Web server configured to listen on 8080,23,3,1.0,13,True,,0,True,False
+2,N1,U005,Private route table rt-app-a has no default route to the NAT gateway,106,4,1.0,18,False,,0,True,False
+2,N2,U007,rt-app-b routes through nat-a in the other AZ (cross-AZ dependency),106,2,1.0,18,False,,0,True,False
+2,N4,U002,Public route table rt-pub lost its default route to the internet gateway,106,14,2.0,7,True,,0,True,False
+2,N5,U030,Internet gateway detached from the VPC,106,14,2.0,7,True,,0,True,False
+2,S4,U147,sg-db ingress references sg-alb instead of sg-app,106,29,2.0,27,True,,0,True,False
+2,A1,U063,nacl-app has no inbound rule for ephemeral return ports,106,21,1.0,17,True,MC3,1,True,True
+2,A2,U078,nacl-db inbound rule for 3306 removed,106,29,1.0,28,True,MC3,1,True,True
+2,A3,U053,nacl-pub replaced by a custom ACL allowing only inbound 80/443,106,4,1.0,6,True,MC3,1,True,False
+2,A4,U058,nacl-app inbound port 80 restricted to the db subnets,106,15,1.0,17,True,MC3,1,True,False
+2,D1,U230,App config points to a stale database endpoint,106,29,4.0,23,True,,0,True,False
+2,D2,U231,App config holds a rotated-out database password,106,29,4.0,23,True,,0,True,False
+2,D3,U228,RDS instance is single-AZ,106,1,0.0,0,False,,0,False,False
+3,N3,U032,NAT gateway nat-a placed in private subnet app-a,171,10,1.0,20,False,MC8,1,True,True
+3,N6,U171,Internet-facing ALB placed in private subnets app-a/app-b,171,10,1.0,4,True,,0,True,False
+3,N7,U188,ASG launches into public subnets without public IPv4 addresses,171,22,2.0,12,True,MC5,1,True,True
+3,S3,U097,"sg-alb allows only 443, not 80, from the internet",171,10,1.0,5,True,,0,True,False
+3,S6,U122,sg-alb egress restricted to tcp/443,171,25,2.0,5,True,MC2,1,True,False
+3,L1,U178,Target-group health-check path is /healthz (returns 404),171,5,1.0,10,True,MC7,1,True,True
+3,L2,U176,Target group forwards to port 8080; app listens on 80,171,25,1.0,10,True,,0,True,False
+3,L3,U204,ASG not attached to the target group,171,3,1.0,9,True,,0,True,False
+3,L4,U172,Listener :80 forwards to stale target group tg-old,171,3,1.0,4,True,,0,True,False
+3,L5,U215,App redirects /health to HTTPS (301),171,5,1.0,9,True,MC7,1,True,False
+3,L6,U168,ALB node for AZ b placed in private subnet app-b (subnets pub-a/app-b),171,1,0.0,0,True,,0,False,False
+3,C2,U202,ASG desired capacity set to 0,171,2,1.0,11,True,,0,True,False
+3,C5,U184,ASG restricted to subnet app-a,171,1,0.0,0,False,,0,False,False
+4,I1,U218,Instance role lacks s3:PutObject,184,3,1.0,22,True,MC6,1,True,True
+4,I2,U223,"Role policy resource is the bucket ARN, not bucket/*",184,6,2.0,22,True,MC6,1,True,False
+4,I3,U208,Launch template has no instance profile,184,24,4.0,13,True,MC6,1,True,False
+4,I4,U216,Role trust policy names lambda.amazonaws.com,184,24,4.0,14,True,MC6,1,True,False
+4,I5,U224,Bucket policy explicitly denies PutObject to the instance role,184,3,1.0,22,True,MC4,1,True,True
+4,I6,U220,Role lacks Systems Manager permissions,184,1,0.0,0,False,MC6,1,False,False
+4,I7,U219,Role lacks CloudWatch Logs permissions,184,1,0.0,0,False,MC6,1,False,False
+4,E1,U232,CloudFront origin points to a deleted ALB DNS name,184,1,0.0,0,True,,0,False,False
+4,E2,U233,CloudFront origin protocol is HTTPS-only; ALB has no 443 listener,184,1,0.0,0,True,,0,False,False
+4,E3,U225,Bucket policy lacks the CloudFront origin-access-control grant,184,1,0.0,0,True,MC4,1,False,False

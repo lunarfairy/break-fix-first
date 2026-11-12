@@ -1,0 +1,167 @@
+{
+ "harness": "llm_bench.py v2 (round 2)",
+ "harness_sha256": "5a4cac0514e7a8f97215d64f2693317fa8efa42060a86192ab8445fe7325e462",
+ "cloudsim_sha256": "eeb8bfe422f8373798b58e1a08e193f0a854f1e6cfe2e818455eeb6bbc165afe",
+ "faults": [
+  "N1",
+  "N2",
+  "N3",
+  "N4",
+  "N5",
+  "N6",
+  "N7",
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "L1",
+  "L2",
+  "L3",
+  "L4",
+  "L5",
+  "L6",
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "C5",
+  "I1",
+  "I2",
+  "I3",
+  "I4",
+  "I5",
+  "I6",
+  "I7",
+  "D1",
+  "D2",
+  "D3",
+  "E1",
+  "E2",
+  "E3"
+ ],
+ "n_faults": 41,
+ "runs_per_agent": 2,
+ "episodes": 164,
+ "agents": {
+  "haiku": "claude-haiku-5-5",
+  "sonnet": "claude-sonnet-5"
+ },
+ "judge_model_requested": "claude-sonnet-5",
+ "judge_model_ids_returned": [
+  "claude-sonnet-5"
+ ],
+ "grader2_model_requested": "claude-opus-5",
+ "grader2_model_ids_returned": [
+  "claude-opus-5"
+ ],
+ "thinking": {
+  "type": "disabled"
+ },
+ "temperature": "not set (API default sampling); no request field was omitted by the host",
+ "agent_max_tokens": 400,
+ "judge_max_tokens": 200,
+ "grader2_max_tokens": 200,
+ "max_concurrency": 16,
+ "limits": {
+  "max_turns": 15,
+  "max_diagnoses": 3
+ },
+ "judge_parse_retries": "up to 3 attempts per verdict; all 153 in-loop and 153 grader2 verdicts parsed on the first attempt",
+ "rubric": "ACCEPT if the statement names the changed setting and either its wrong value/omission or the intended correct value, so that applying it would restore the design; REJECT if it names a different setting of the same resource, a different resource, or is too vague to apply.",
+ "run_order": [
+  {
+   "agent": "haiku",
+   "run": 1,
+   "model_requested": "claude-haiku-5-5",
+   "model_ids_returned": [
+    "claude-haiku-5-5"
+   ],
+   "t_start_utc": "2026-11-06T03:34:26Z",
+   "t_end_utc": "2026-11-06T03:35:46Z",
+   "episodes": 41,
+   "solved": 37
+  },
+  {
+   "agent": "sonnet",
+   "run": 1,
+   "model_requested": "claude-sonnet-5",
+   "model_ids_returned": [
+    "claude-sonnet-5"
+   ],
+   "t_start_utc": "2026-11-06T03:35:46Z",
+   "t_end_utc": "2026-11-06T03:37:54Z",
+   "episodes": 41,
+   "solved": 39
+  },
+  {
+   "agent": "haiku",
+   "run": 2,
+   "model_requested": "claude-haiku-5-5",
+   "model_ids_returned": [
+    "claude-haiku-5-5"
+   ],
+   "t_start_utc": "2026-11-06T03:37:54Z",
+   "t_end_utc": "2026-11-06T03:39:22Z",
+   "episodes": 41,
+   "solved": 38
+  },
+  {
+   "agent": "sonnet",
+   "run": 2,
+   "model_requested": "claude-sonnet-5",
+   "model_ids_returned": [
+    "claude-sonnet-5"
+   ],
+   "t_start_utc": "2026-11-06T03:39:22Z",
+   "t_end_utc": "2026-11-06T03:41:28Z",
+   "episodes": 41,
+   "solved": 38
+  }
+ ],
+ "grader2_t_utc": "run once after all four agent runs completed (after 2026-11-06T03:41:28Z), single batch, concurrency 16",
+ "api_errors": 0,
+ "invalid_replies": 13,
+ "truncated_replies_max_tokens": 11,
+ "tokens": {
+  "agent": {
+   "tokens_in": 302660,
+   "tokens_in_cache_read": 6714192,
+   "tokens_in_cache_write": 225762,
+   "tokens_out": 94840
+  },
+  "in_loop_judge": {
+   "judge_tokens_in": 179740,
+   "judge_tokens_in_cache_read": 747864,
+   "judge_tokens_out": 12112
+  },
+  "grader2": {
+   "grader2_tokens_in": 179740,
+   "grader2_tokens_in_cache_read": 747864,
+   "grader2_tokens_out": 14453
+  },
+  "total_uncached_input_plus_output": 783545,
+  "total_including_cache_reads_and_writes": 9219227,
+  "note": "tokens_in = uncached input tokens (as in round 1); cache_read/cache_write are prompt-cache tokens, including the ~4.9k-token host preamble on every call.",
+  "excluded_smoke_test_and_probe": {
+   "smoke_test_2_episodes_discarded": {
+    "input": 6077,
+    "output": 868,
+    "cache_read": 91332,
+    "cache_write": 4457
+   },
+   "availability_probe": "3 calls x ~30 tokens"
+  }
+ },
+ "python": "3.11.16",
+ "seeds": {
+  "bootstrap": 20261106,
+  "permutation": 20261106,
+  "numpy_generator": "default_rng"
+ }
+}
